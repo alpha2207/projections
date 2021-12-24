@@ -1,0 +1,49 @@
+.footer{
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+    background-color: #000!important;
+}
+.container-foot {
+    background-color: #000!important;
+}
+a img {
+    height: 30px;
+}
+
+.mail {
+    margin-top: 12px!important;
+}
+.address{
+display: flex;
+flex-direction: column;
+}
+.address h5 {
+    margin-top: 5px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+.address * {
+    margin: 0.5rem!important;
+    height: auto;
+}
+
+
+.credits{
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+@media only screen 
+   and (max-width : 360px) {
+
+    .footer{
+        justify-content: center;
+        text-align: center;
+    }
+    iframe{
+        width: 250;
+        height: 180;
+    }
+
+}

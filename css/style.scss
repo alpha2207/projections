@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Kalam&family=Montserrat:wght@400;500;600&family=Poppins:wght@100;300;400;500&family=Roboto:wght@100;300;400&display=swap');
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+$primray-color: rgb(45, 94, 255);
+$herobg: #121520;
+$main-font:"Poppins";
+$background:#0a0a0a;
+$text-clr:#3a3a3a;
+
+.loading-div{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+    background-color: $background;
+    position: relative;
+    .loading-bar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0.3rem;
+        background-color: #fff;
+    }
+    h1{
+        font-size: 5rem;
+        color: $text-clr;
+        opacity: 0.4;
+        font-size: 10rem;
+    }
+    .svg-div{
+        height: 150px;
+        width: 150px;
+        z-index: 99;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0px;
+        background: none no-repeat center center;
+        animation:carslide 5s linear 1;
+    }
+    p{
+        color: $text-clr;
+        opacity: 0.4;
+        margin-left: 0.4rem;
+        font-weight: bold;
+    }
+    
+}
+.slider{
+    background-color: #fff;
+    height: 100vh;
+    width: 50vw;
+    position: absolute;
+    z-index: 999;
+    transition: 1s linear;
+    &.s1{
+        left: -100%;
+    }
+    &.s2{
+        left: 100%;
+    }
+    &.slide-left{
+        left:0%
+    }
+    &.slide-right{
+        left:50%
+    }
+}
+@keyframes carslide{
+    0%{
+        left: 0vw;
+        background-image: url(../svg/Asset4.svg);
+    }
+    25%{
+        left: 25vw;
+        background-image:url(../svg/Asset3.svg);
+    }
+    50%{
+        left: 50vw;
+        background-image:url(../svg/Asset1.svg);
+    }
+    75%{
+        left: 75vw;
+        background-image:url(../svg/Asset2.svg);
+    }
+    100%{
+        left: 100vw;
+        background-image:url(../svg/Asset2.svg);
+    }
+}
+.main-head{
+    z-index: 9999;
+    position: absolute;
+    top: 50%;    
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-size: 3rem;
+}
+
+body{
+    // overflow-y: hidden;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    color:#fff;
+    margin: 0;
+    font-family: 'Poppins' , sans-serif;
+    .conatiner-md{
+        width: 100%;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.navbar {
+    width: 90%;
+    background: rgb(0, 0, 0);
+    padding: 1em;
+
+    .navbar-brand{
+        font-weight: bold;
+    }
+}
+.logo-gif{
+    width: auto;
+    margin-top: -15px;
+    height: 60px;
+    
+}
+.active{
+    font-weight: bold!important;
+    color: $primray-color!important;
+}
+.hero {
+    background: linear-gradient(
+292deg, #fff0,#110d17),url(../imgs/banner.jpg) no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    .hero-title{
+        font-size: 4rem;
+    }
+    p{
+        font-size: 1.8rem;
+    }
+    .register{
+        width: 2rem;
+        display: flex;
+        button {
+            width:22rem;
+            height: 3.5rem;
+            border-radius: .3rem;
+            background: linear-gradient(
+                -292deg, #9838a58f, #9d78d54f);
+                color: #fff;
+                font-weight: bold;
+                border:none;
+        }
+    }
+
+}
+
+.col1 {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+@media only screen 
+   and (max-width : 360px) {
+  .navbar{
+      width: 100%;
+
+  }
+  .navbar-item{
+      text-align: center;
+  }
+}
