@@ -19,10 +19,16 @@
   width: 100% !important;
 }
 
+#main .row .col-lg-4 .card-body p:nth-child(3) {
+  font-weight: bold;
+}
+
 #main .row button {
   -webkit-box-shadow: 0px 4px 12px -2px #474747;
           box-shadow: 0px 4px 12px -2px #474747;
   width: 100%;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
 }
 
 #main .row button:hover {
